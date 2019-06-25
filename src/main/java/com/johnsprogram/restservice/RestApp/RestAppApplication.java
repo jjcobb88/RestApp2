@@ -13,15 +13,20 @@ public class RestAppApplication {
 		SpringApplication.run(RestAppApplication.class, args);
 
 		What3WordsV3 api = new What3WordsV3("VEXXXJRL");
-		ConvertToCoordinates coordinates = api.convertToCoordinates("silk.slap.soils")
+
+		ConvertToCoordinates coordinates1 = api.convertToCoordinates("silk.slap.soils")
 				.execute();
-		System.out.println("Coordinates for 'silk.slap.soils': " + coordinates);
+
 		ConvertToCoordinates coordinates2 = api.convertToCoordinates("zealous.range.garage")
 				.execute();
-		System.out.println("Coordinates for 'zealous.range.garage': " + coordinates2);
+
 		ConvertToCoordinates coordinates3 = api.convertToCoordinates("slurs.this.shark")
 				.execute();
-		System.out.println("Coordinates for 'slurs.this.shark': " + coordinates3);
+
+
+		System.out.println("Coordinates for 'silk.slap.soils': " + coordinates1 + "\n"
+				           + "Coordinates for 'zealous.range.garage': " + coordinates2 + "\n"
+				           + "Coordinates for 'slurs.this.shark': " + coordinates3);
 	}
 
 }
