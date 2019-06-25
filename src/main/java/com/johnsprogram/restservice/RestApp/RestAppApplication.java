@@ -30,11 +30,10 @@ public class RestAppApplication {
         ConvertToCoordinates coordinates3 = api.convertToCoordinates("slurs.this.shark")
                 .execute();
 
-
         //Print fetched JSON data to console
-        System.out.println("Coordinates for 'silk.slap.soils': " + coordinates1 + "\n"
-                           + "Coordinates for 'zealous.range.garage': " + coordinates2 + "\n"
-                           + "Coordinates for 'slurs.this.shark': " + coordinates3);
+        System.out.println("Coordinates for 'silk.slap.soils': " + coordinates1);
+        System.out.println("Coordinates for 'zealous.range.garage': " + coordinates2);
+        System.out.println("Coordinates for 'slurs.this.shark': " + coordinates3);
     }
 
 }
