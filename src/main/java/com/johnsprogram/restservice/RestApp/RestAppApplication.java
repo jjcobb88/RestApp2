@@ -13,28 +13,28 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RestAppApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SpringApplication.run(RestAppApplication.class, args);
+        SpringApplication.run(RestAppApplication.class, args);
 
-		//Create instance of api with given key
-		What3WordsV3 api = new What3WordsV3("VEXXXJRL");
+        //Create instance of api with given key
+        What3WordsV3 api = new What3WordsV3("VEXXXJRL");
 
-		//Convert words to coordinates
-		ConvertToCoordinates coordinates1 = api.convertToCoordinates("silk.slap.soils")
-				.execute();
+        //Convert words to coordinates
+        ConvertToCoordinates coordinates1 = api.convertToCoordinates("silk.slap.soils")
+                .execute();
 
-		ConvertToCoordinates coordinates2 = api.convertToCoordinates("zealous.range.garage")
-				.execute();
+        ConvertToCoordinates coordinates2 = api.convertToCoordinates("zealous.range.garage")
+                .execute();
 
-		ConvertToCoordinates coordinates3 = api.convertToCoordinates("slurs.this.shark")
-				.execute();
+        ConvertToCoordinates coordinates3 = api.convertToCoordinates("slurs.this.shark")
+                .execute();
 
 
-		//Print fetched JSON data to console
-		System.out.println("Coordinates for 'silk.slap.soils': " + coordinates1 + "\n"
-				           + "Coordinates for 'zealous.range.garage': " + coordinates2 + "\n"
-				           + "Coordinates for 'slurs.this.shark': " + coordinates3);
-	}
+        //Print fetched JSON data to console
+        System.out.println("Coordinates for 'silk.slap.soils': " + coordinates1 + "\n"
+                           + "Coordinates for 'zealous.range.garage': " + coordinates2 + "\n"
+                           + "Coordinates for 'slurs.this.shark': " + coordinates3);
+    }
 
 }
